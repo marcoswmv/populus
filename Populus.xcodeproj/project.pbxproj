@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F782A93A2CE6A1C700692FFF /* PopulusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9392CE6A1C700692FFF /* PopulusApp.swift */; };
+		F782A93C2CE6A1C700692FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A93B2CE6A1C700692FFF /* ContentView.swift */; };
+		F782A93E2CE6A1CA00692FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F782A93D2CE6A1CA00692FFF /* Assets.xcassets */; };
+		F782A9412CE6A1CA00692FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */; };
+		F782A94B2CE6A1CA00692FFF /* PopulusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A94A2CE6A1CA00692FFF /* PopulusTests.swift */; };
+		F782A9552CE6A1CA00692FFF /* PopulusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */; };
+		F782A9572CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F782A9472CE6A1CA00692FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F782A92E2CE6A1C600692FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F782A9352CE6A1C700692FFF;
+			remoteInfo = Populus;
+		};
+		F782A9512CE6A1CA00692FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F782A92E2CE6A1C600692FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F782A9352CE6A1C700692FFF;
+			remoteInfo = Populus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F782A9362CE6A1C700692FFF /* Populus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Populus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F782A9392CE6A1C700692FFF /* PopulusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusApp.swift; sourceTree = "<group>"; };
+		F782A93B2CE6A1C700692FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F782A93D2CE6A1CA00692FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F782A94A2CE6A1CA00692FFF /* PopulusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusTests.swift; sourceTree = "<group>"; };
+		F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusUITests.swift; sourceTree = "<group>"; };
+		F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F782A9332CE6A1C700692FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F782A9432CE6A1CA00692FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F782A94D2CE6A1CA00692FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F782A92D2CE6A1C600692FFF = {
+			isa = PBXGroup;
+			children = (
+				F782A9382CE6A1C700692FFF /* Populus */,
+				F782A9492CE6A1CA00692FFF /* PopulusTests */,
+				F782A9532CE6A1CA00692FFF /* PopulusUITests */,
+				F782A9372CE6A1C700692FFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F782A9372CE6A1C700692FFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F782A9362CE6A1C700692FFF /* Populus.app */,
+				F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */,
+				F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F782A9382CE6A1C700692FFF /* Populus */ = {
+			isa = PBXGroup;
+			children = (
+				F782A9392CE6A1C700692FFF /* PopulusApp.swift */,
+				F782A93B2CE6A1C700692FFF /* ContentView.swift */,
+				F782A93D2CE6A1CA00692FFF /* Assets.xcassets */,
+				F782A93F2CE6A1CA00692FFF /* Preview Content */,
+			);
+			path = Populus;
+			sourceTree = "<group>";
+		};
+		F782A93F2CE6A1CA00692FFF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F782A9492CE6A1CA00692FFF /* PopulusTests */ = {
+			isa = PBXGroup;
+			children = (
+				F782A94A2CE6A1CA00692FFF /* PopulusTests.swift */,
+			);
+			path = PopulusTests;
+			sourceTree = "<group>";
+		};
+		F782A9532CE6A1CA00692FFF /* PopulusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */,
+				F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */,
+			);
+			path = PopulusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F782A9352CE6A1C700692FFF /* Populus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F782A95A2CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "Populus" */;
+			buildPhases = (
+				F782A9322CE6A1C700692FFF /* Sources */,
+				F782A9332CE6A1C700692FFF /* Frameworks */,
+				F782A9342CE6A1C700692FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Populus;
+			productName = Populus;
+			productReference = F782A9362CE6A1C700692FFF /* Populus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F782A9452CE6A1CA00692FFF /* PopulusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F782A95D2CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "PopulusTests" */;
+			buildPhases = (
+				F782A9422CE6A1CA00692FFF /* Sources */,
+				F782A9432CE6A1CA00692FFF /* Frameworks */,
+				F782A9442CE6A1CA00692FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F782A9482CE6A1CA00692FFF /* PBXTargetDependency */,
+			);
+			name = PopulusTests;
+			productName = PopulusTests;
+			productReference = F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F782A94F2CE6A1CA00692FFF /* PopulusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F782A9602CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "PopulusUITests" */;
+			buildPhases = (
+				F782A94C2CE6A1CA00692FFF /* Sources */,
+				F782A94D2CE6A1CA00692FFF /* Frameworks */,
+				F782A94E2CE6A1CA00692FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F782A9522CE6A1CA00692FFF /* PBXTargetDependency */,
+			);
+			name = PopulusUITests;
+			productName = PopulusUITests;
+			productReference = F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F782A92E2CE6A1C600692FFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F782A9352CE6A1C700692FFF = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					F782A9452CE6A1CA00692FFF = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F782A9352CE6A1C700692FFF;
+					};
+					F782A94F2CE6A1CA00692FFF = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F782A9352CE6A1C700692FFF;
+					};
+				};
+			};
+			buildConfigurationList = F782A9312CE6A1C600692FFF /* Build configuration list for PBXProject "Populus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F782A92D2CE6A1C600692FFF;
+			productRefGroup = F782A9372CE6A1C700692FFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F782A9352CE6A1C700692FFF /* Populus */,
+				F782A9452CE6A1CA00692FFF /* PopulusTests */,
+				F782A94F2CE6A1CA00692FFF /* PopulusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F782A9342CE6A1C700692FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F782A9412CE6A1CA00692FFF /* Preview Assets.xcassets in Resources */,
+				F782A93E2CE6A1CA00692FFF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F782A9442CE6A1CA00692FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F782A94E2CE6A1CA00692FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F782A9322CE6A1C700692FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F782A93C2CE6A1C700692FFF /* ContentView.swift in Sources */,
+				F782A93A2CE6A1C700692FFF /* PopulusApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F782A9422CE6A1CA00692FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F782A94B2CE6A1CA00692FFF /* PopulusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F782A94C2CE6A1CA00692FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F782A9552CE6A1CA00692FFF /* PopulusUITests.swift in Sources */,
+				F782A9572CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F782A9482CE6A1CA00692FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F782A9352CE6A1C700692FFF /* Populus */;
+			targetProxy = F782A9472CE6A1CA00692FFF /* PBXContainerItemProxy */;
+		};
+		F782A9522CE6A1CA00692FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F782A9352CE6A1C700692FFF /* Populus */;
+			targetProxy = F782A9512CE6A1CA00692FFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F782A9582CE6A1CA00692FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F782A9592CE6A1CA00692FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F782A95B2CE6A1CA00692FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Populus/Preview Content\"";
+				DEVELOPMENT_TEAM = Q4L92P5BF3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.Populus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F782A95C2CE6A1CA00692FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Populus/Preview Content\"";
+				DEVELOPMENT_TEAM = Q4L92P5BF3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.Populus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F782A95E2CE6A1CA00692FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4L92P5BF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.PopulusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Populus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Populus";
+			};
+			name = Debug;
+		};
+		F782A95F2CE6A1CA00692FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4L92P5BF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.PopulusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Populus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Populus";
+			};
+			name = Release;
+		};
+		F782A9612CE6A1CA00692FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4L92P5BF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.PopulusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Populus;
+			};
+			name = Debug;
+		};
+		F782A9622CE6A1CA00692FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4L92P5BF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.PopulusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Populus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F782A9312CE6A1C600692FFF /* Build configuration list for PBXProject "Populus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F782A9582CE6A1CA00692FFF /* Debug */,
+				F782A9592CE6A1CA00692FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F782A95A2CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "Populus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F782A95B2CE6A1CA00692FFF /* Debug */,
+				F782A95C2CE6A1CA00692FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F782A95D2CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "PopulusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F782A95E2CE6A1CA00692FFF /* Debug */,
+				F782A95F2CE6A1CA00692FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F782A9602CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "PopulusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F782A9612CE6A1CA00692FFF /* Debug */,
+				F782A9622CE6A1CA00692FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F782A92E2CE6A1C600692FFF /* Project object */;
+}

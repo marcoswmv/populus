@@ -10,4 +10,6 @@ import Foundation
 
 enum AppStrings {
     static var populationLabel: String = "Population:"
+    static var populationTitle: String = "Population"
+    static var errorAlertButtonTitle: String = "Ok"
 }

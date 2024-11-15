@@ -20,7 +20,7 @@ struct PopulationDataRow: View {
 
                 HStack {
                     Text(AppStrings.populationLabel)
-                    Text(model.population.formattedToDecimal)
+                    Text(String(model.population.formattedToDecimalString))
                         .fontWeight(.bold)
                 }
                 .font(.subheadline)
@@ -38,9 +38,8 @@ struct PopulationDataRow: View {
     PopulationDataRow(
         model: .init(
             state: "Alabama",
-            //            nation: "United States",
             year: "2022",
-            population: "5.028.092"
+            population: 5028092
         )
     )
 }

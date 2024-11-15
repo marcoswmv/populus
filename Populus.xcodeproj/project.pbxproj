@@ -22,6 +22,8 @@
 		F782A9772CE6D6BF00692FFF /* USADataAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9762CE6D6BF00692FFF /* USADataAPIEndpoint.swift */; };
 		F782A97D2CE6DAA800692FFF /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97C2CE6DAA800692FFF /* AppConfigs.swift */; };
 		F782A97F2CE6E78800692FFF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97E2CE6E78800692FFF /* NetworkService.swift */; };
+		F782A9812CE6FCCD00692FFF /* PopulationDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */; };
+		F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9822CE71E0F00692FFF /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		F782A97B2CE6D9F700692FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Populus/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		F782A97C2CE6DAA800692FFF /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
 		F782A97E2CE6E78800692FFF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataResponse.swift; sourceTree = "<group>"; };
+		F782A9822CE71E0F00692FFF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				F782A9682CE6C5D900692FFF /* PopulationData.swift */,
+				F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				F782A96A2CE6C9F700692FFF /* String+Extension.swift */,
+				F782A9822CE71E0F00692FFF /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,12 +365,14 @@
 			files = (
 				F782A97F2CE6E78800692FFF /* NetworkService.swift in Sources */,
 				F782A9772CE6D6BF00692FFF /* USADataAPIEndpoint.swift in Sources */,
+				F782A9812CE6FCCD00692FFF /* PopulationDataResponse.swift in Sources */,
 				F782A9692CE6C5D900692FFF /* PopulationData.swift in Sources */,
 				F782A9662CE6BFD400692FFF /* PopulationDataRow.swift in Sources */,
 				F782A93C2CE6A1C700692FFF /* PopulationListView.swift in Sources */,
 				F782A96D2CE6CCE300692FFF /* PopulationListViewModel.swift in Sources */,
 				F782A9712CE6CFF600692FFF /* AppStrings.swift in Sources */,
 				F782A96B2CE6C9F700692FFF /* String+Extension.swift in Sources */,
+				F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */,
 				F782A93A2CE6A1C700692FFF /* PopulusApp.swift in Sources */,
 				F782A97D2CE6DAA800692FFF /* AppConfigs.swift in Sources */,
 			);
@@ -405,6 +413,7 @@
 /* Begin XCBuildConfiguration section */
 		F782A9582CE6A1CA00692FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -468,6 +477,7 @@
 		};
 		F782A9592CE6A1CA00692FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -524,6 +534,7 @@
 		};
 		F782A95B2CE6A1CA00692FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +565,7 @@
 		};
 		F782A95C2CE6A1CA00692FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -584,6 +596,7 @@
 		};
 		F782A95E2CE6A1CA00692FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +617,7 @@
 		};
 		F782A95F2CE6A1CA00692FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +638,7 @@
 		};
 		F782A9612CE6A1CA00692FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -642,6 +657,7 @@
 		};
 		F782A9622CE6A1CA00692FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

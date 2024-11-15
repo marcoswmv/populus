@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct PopulationListView: View {
+struct PopulationListView<ViewModel: PopulationListViewModelProtocol>: View {
 
-    @EnvironmentObject private var viewModel: PopulationListViewModel
+    @ObservedObject var viewModel: ViewModel
     @State private var showingAlert: Bool = false
 
     var body: some View {
@@ -29,18 +29,9 @@ struct PopulationListView: View {
                     ) {}
                 }
             )
-            .onAppear {
-                viewModel.fetchData()
-            }
-            .onChange(of: viewModel.areaLevel) { (_, value) in
-                viewModel.fetchData()
-            }
-            .onChange(of: viewModel.timeFilter) { (_, value) in
-                viewModel.fetchData()
-            }
-            .onChange(of: viewModel.errorDescription) { (oldValue, newValue) in
-                if !newValue.isEmpty {
-                    showingAlert.toggle()
+            .onChange(of: viewModel.errorDescription) { (_, value) in
+                if !value.isEmpty {
+                    showingAlert = true
                 }
             }
 
@@ -68,11 +59,10 @@ struct PopulationListView: View {
 
 struct PreviewPopulationListView: View {
 
-    @StateObject private var viewModel: PopulationListViewModel = .init(networkService: NetworkService())
+    @StateObject private var viewModel: PopulationListViewModel = .init(networkManager: NetworkManager())
 
     var body: some View {
-        PopulationListView()
-            .environmentObject(viewModel)
+        PopulationListView(viewModel: viewModel)
     }
 }
 

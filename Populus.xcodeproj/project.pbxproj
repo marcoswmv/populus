@@ -19,11 +19,13 @@
 		F782A96B2CE6C9F700692FFF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A96A2CE6C9F700692FFF /* String+Extension.swift */; };
 		F782A96D2CE6CCE300692FFF /* PopulationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A96C2CE6CCE300692FFF /* PopulationListViewModel.swift */; };
 		F782A9712CE6CFF600692FFF /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9702CE6CFF600692FFF /* AppStrings.swift */; };
-		F782A9772CE6D6BF00692FFF /* USADataAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9762CE6D6BF00692FFF /* USADataAPIEndpoint.swift */; };
+		F782A9772CE6D6BF00692FFF /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */; };
 		F782A97D2CE6DAA800692FFF /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97C2CE6DAA800692FFF /* AppConfigs.swift */; };
-		F782A97F2CE6E78800692FFF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97E2CE6E78800692FFF /* NetworkService.swift */; };
+		F782A97F2CE6E78800692FFF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97E2CE6E78800692FFF /* NetworkManager.swift */; };
 		F782A9812CE6FCCD00692FFF /* PopulationDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */; };
 		F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9822CE71E0F00692FFF /* Int+Extension.swift */; };
+		F782A9872CE7761C00692FFF /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9862CE7761C00692FFF /* APIEnvironment.swift */; };
+		F782A9892CE7792E00692FFF /* AdministrativeAreaLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9882CE7792E00692FFF /* AdministrativeAreaLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +61,15 @@
 		F782A96A2CE6C9F700692FFF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F782A96C2CE6CCE300692FFF /* PopulationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationListViewModel.swift; sourceTree = "<group>"; };
 		F782A9702CE6CFF600692FFF /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
-		F782A9762CE6D6BF00692FFF /* USADataAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USADataAPIEndpoint.swift; sourceTree = "<group>"; };
+		F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		F782A97A2CE6D82500692FFF /* Configs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.xcconfig; sourceTree = "<group>"; };
 		F782A97B2CE6D9F700692FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Populus/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		F782A97C2CE6DAA800692FFF /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
-		F782A97E2CE6E78800692FFF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F782A97E2CE6E78800692FFF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataResponse.swift; sourceTree = "<group>"; };
 		F782A9822CE71E0F00692FFF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		F782A9862CE7761C00692FFF /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		F782A9882CE7792E00692FFF /* AdministrativeAreaLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrativeAreaLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 			children = (
 				F782A9682CE6C5D900692FFF /* PopulationData.swift */,
 				F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */,
+				F782A9882CE7792E00692FFF /* AdministrativeAreaLevel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,18 +224,19 @@
 		F782A9742CE6D63600692FFF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F782A9752CE6D64200692FFF /* API */,
+				F782A9752CE6D64200692FFF /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		F782A9752CE6D64200692FFF /* API */ = {
+		F782A9752CE6D64200692FFF /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F782A9762CE6D6BF00692FFF /* USADataAPIEndpoint.swift */,
-				F782A97E2CE6E78800692FFF /* NetworkService.swift */,
+				F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */,
+				F782A9862CE7761C00692FFF /* APIEnvironment.swift */,
+				F782A97E2CE6E78800692FFF /* NetworkManager.swift */,
 			);
-			path = API;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,8 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F782A97F2CE6E78800692FFF /* NetworkService.swift in Sources */,
-				F782A9772CE6D6BF00692FFF /* USADataAPIEndpoint.swift in Sources */,
+				F782A9892CE7792E00692FFF /* AdministrativeAreaLevel.swift in Sources */,
+				F782A97F2CE6E78800692FFF /* NetworkManager.swift in Sources */,
+				F782A9772CE6D6BF00692FFF /* APIEndpoint.swift in Sources */,
+				F782A9872CE7761C00692FFF /* APIEnvironment.swift in Sources */,
 				F782A9812CE6FCCD00692FFF /* PopulationDataResponse.swift in Sources */,
 				F782A9692CE6C5D900692FFF /* PopulationData.swift in Sources */,
 				F782A9662CE6BFD400692FFF /* PopulationDataRow.swift in Sources */,

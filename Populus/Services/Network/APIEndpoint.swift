@@ -1,5 +1,5 @@
 //
-//  USADataAPIEndpoint.swift
+//  APIEndpoint.swift
 //  Populus
 //
 //  Created by Marcos Vicente on 15/11/2024.
@@ -9,33 +9,31 @@ import Foundation
 
 typealias Fields = [String: Any]
 
-enum RequestMethod: String {
+enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
 }
 
 protocol EndpointType {
-    var httpMethod: RequestMethod { get }
+    var path: String { get }
+    var httpMethod: HTTPMethod { get }
     var queryItems: [URLQueryItem] { get }
     var fields: Fields? { get }
 }
 
-enum USADataAPIEndpoint {
+enum APIEndpoint {
     case data(AdministrativeAreaLevel = .nation, Year? = nil)
 }
 
-extension USADataAPIEndpoint: EndpointType {
+extension APIEndpoint: EndpointType {
 
-    private var baseURL: String {
-        AppConfigs.APIBaseURL
-    }
-
-    func generateURLRequest() -> URLRequest? {
-        guard var urlComponents: URLComponents = .init(string: baseURL) else { return nil }
+    func generateURLRequest(baseURL: String) -> URLRequest {
+        guard var urlComponents: URLComponents = .init(string: baseURL) else { return .init(url: .temporaryDirectory) }
+        urlComponents.path = self.path
         urlComponents.queryItems = self.queryItems
 
-        guard let url = urlComponents.url else { return nil }
+        guard let url = urlComponents.url else { return .init(url: .temporaryDirectory) }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = self.httpMethod.rawValue
 
@@ -47,7 +45,14 @@ extension USADataAPIEndpoint: EndpointType {
         return urlRequest
     }
 
-    var httpMethod: RequestMethod {
+    var path: String {
+        switch self {
+        case .data:
+            "/api/data"
+        }
+    }
+
+    var httpMethod: HTTPMethod {
         switch self {
         case .data:
             return .get

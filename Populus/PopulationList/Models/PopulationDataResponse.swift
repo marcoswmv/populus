@@ -8,7 +8,7 @@
 import Foundation
 
 struct PopulationDataResponse: Decodable {
-    var data: [PopulationData]
+    let data: [PopulationData]
 }
 
 extension PopulationDataResponse {

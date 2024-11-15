@@ -10,12 +10,11 @@ import SwiftUI
 @main
 struct PopulusApp: App {
     
-    @StateObject private var viewModel: PopulationListViewModel = .init(networkService: NetworkService())
+    @StateObject private var viewModel: PopulationListViewModel = .init(networkManager: NetworkManager())
 
     var body: some Scene {
         WindowGroup {
-            PopulationListView()
-                .environmentObject(viewModel)
+            PopulationListView(viewModel: viewModel)
         }
     }
 }

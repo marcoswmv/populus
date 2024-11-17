@@ -21,7 +21,7 @@ enum NetworkError: Error {
     case decodingFailed
 
     var description: String {
-        self.localizedDescription.debugDescription
+        self.localizedDescription.description
     }
 
     static func mapError(for status: Int) -> Self {

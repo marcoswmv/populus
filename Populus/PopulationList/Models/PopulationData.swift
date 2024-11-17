@@ -21,6 +21,8 @@ struct PopulationData: Decodable {
     }
 }
 
+extension PopulationData: Equatable {}
+
 extension PopulationData {
     static var dummy: PopulationData = .init(state: "Alabama", year: "2022", population: 5028092)
 }

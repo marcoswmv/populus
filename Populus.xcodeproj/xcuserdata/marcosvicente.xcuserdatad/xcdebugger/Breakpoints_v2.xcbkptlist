@@ -7,16 +7,104 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F64C331-C5DC-4330-AE31-6E295B133C3F"
-            shouldBeEnabled = "No"
+            uuid = "D4454FF3-A4DE-4BB5-B40D-FC7682FD19CC"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Populus/Services/Network/ResponseWrapper.swift"
+            filePath = "PopulusTests/PopulationListViewModel/MockPopulationService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "init(from:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "requestPopulationData(at:on:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D4454FF3-A4DE-4BB5-B40D-FC7682FD19CC - c12611b86efe1d0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PopulusTests.MockPopulationService.requestPopulationData(at: Populus.LocationType, on: Swift.Optional&lt;Populus.Year&gt;, completionHandler: (Swift.Result&lt;Populus.PopulationDataResponse, Populus.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PopulusTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcosvicente/development/Xcode/My%20Projects/Populus/PopulusTests/PopulationListViewModel/MockPopulationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "D4454FF3-A4DE-4BB5-B40D-FC7682FD19CC - c12611b86efe1d0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PopulusTests.MockPopulationService.requestPopulationData(at: Populus.LocationType, on: Swift.Optional&lt;Populus.Year&gt;, completionHandler: (Swift.Result&lt;Populus.PopulationDataResponse, Populus.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PopulusTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcosvicente/development/Xcode/My%20Projects/Populus/PopulusTests/PopulationListViewModel/MockPopulationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "D4454FF3-A4DE-4BB5-B40D-FC7682FD19CC - c12611b86efe1d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PopulusTests.MockPopulationService.requestPopulationData(at: Populus.LocationType, on: Swift.Optional&lt;Populus.Year&gt;, completionHandler: (Swift.Result&lt;Populus.PopulationDataResponse, Populus.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PopulusTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcosvicente/development/Xcode/My%20Projects/Populus/PopulusTests/PopulationListViewModel/MockPopulationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "D4454FF3-A4DE-4BB5-B40D-FC7682FD19CC - c12611b86efe1d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PopulusTests.MockPopulationService.requestPopulationData(at: Populus.LocationType, on: Swift.Optional&lt;Populus.Year&gt;, completionHandler: (Swift.Result&lt;Populus.PopulationDataResponse, Populus.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PopulusTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcosvicente/development/Xcode/My%20Projects/Populus/PopulusTests/PopulationListViewModel/MockPopulationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDETestFailureBreakpoint">
+         <BreakpointContent
+            uuid = "040AECB4-2205-4270-8F87-38C79394E9BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2856056E-5D3E-41B8-8390-EC8BF18BDC88"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Populus/PopulationList/ViewModels/PopulationListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -19,6 +19,7 @@ struct PopulationListView<ViewModel: PopulationListViewModelProtocol>: View {
                     PopulationDataRow(viewModel: data)
                 }
             }
+            .onAppear(perform: viewModel.fetchData)
             .alert(
                 viewModel.errorDescription,
                 isPresented: $showingAlert,

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "14FF5566-9277-4E20-A401-C49D54804E57",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Populus.xcodeproj",
+      "identifier" : "F782A9352CE6A1C700692FFF",
+      "name" : "Populus"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Populus.xcodeproj",
+        "identifier" : "F782A9452CE6A1CA00692FFF",
+        "name" : "PopulusTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -12,8 +12,6 @@
 		F782A93E2CE6A1CA00692FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F782A93D2CE6A1CA00692FFF /* Assets.xcassets */; };
 		F782A9412CE6A1CA00692FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */; };
 		F782A94B2CE6A1CA00692FFF /* PopulationListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */; };
-		F782A9552CE6A1CA00692FFF /* PopulusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */; };
-		F782A9572CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */; };
 		F782A9662CE6BFD400692FFF /* PopulationDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9652CE6BFD400692FFF /* PopulationDataRow.swift */; };
 		F782A9692CE6C5D900692FFF /* PopulationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9682CE6C5D900692FFF /* PopulationData.swift */; };
 		F782A96B2CE6C9F700692FFF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A96A2CE6C9F700692FFF /* String+Extension.swift */; };
@@ -26,25 +24,17 @@
 		F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9822CE71E0F00692FFF /* Int+Extension.swift */; };
 		F782A9872CE7761C00692FFF /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9862CE7761C00692FFF /* APIEnvironment.swift */; };
 		F782A9892CE7792E00692FFF /* LocationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9882CE7792E00692FFF /* LocationType.swift */; };
-		F782A98B2CE7A3BF00692FFF /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A98A2CE7A3BF00692FFF /* MockNetworkManager.swift */; };
 		F782A9A72CE933D600692FFF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9A62CE933D600692FFF /* NetworkError.swift */; };
 		F782A9AD2CE95BA100692FFF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9AC2CE95BA100692FFF /* Parser.swift */; };
 		F782A9AF2CE95BF900692FFF /* PopulationDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9AE2CE95BF900692FFF /* PopulationDataViewModel.swift */; };
 		F782A9B12CE95E1F00692FFF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B02CE95E1F00692FFF /* NetworkManager.swift */; };
 		F782A9B32CE9643100692FFF /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B22CE9643100692FFF /* Measure.swift */; };
 		F782A9B52CE9643E00692FFF /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B42CE9643E00692FFF /* Year.swift */; };
-		F782A9B82CE9682F00692FFF /* PopulationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B72CE9682F00692FFF /* PopulationServiceSpy.swift */; };
+		F782A9B82CE9682F00692FFF /* MockPopulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B72CE9682F00692FFF /* MockPopulationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F782A9472CE6A1CA00692FFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F782A92E2CE6A1C600692FFF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F782A9352CE6A1C700692FFF;
-			remoteInfo = Populus;
-		};
-		F782A9512CE6A1CA00692FFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F782A92E2CE6A1C600692FFF /* Project object */;
 			proxyType = 1;
@@ -61,9 +51,6 @@
 		F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "Populus/Resources/Preview Content/Preview Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationListViewModelTests.swift; sourceTree = "<group>"; };
-		F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusUITests.swift; sourceTree = "<group>"; };
-		F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F782A9652CE6BFD400692FFF /* PopulationDataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataRow.swift; sourceTree = "<group>"; };
 		F782A9682CE6C5D900692FFF /* PopulationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationData.swift; sourceTree = "<group>"; };
 		F782A96A2CE6C9F700692FFF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -78,14 +65,14 @@
 		F782A9822CE71E0F00692FFF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		F782A9862CE7761C00692FFF /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		F782A9882CE7792E00692FFF /* LocationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationType.swift; sourceTree = "<group>"; };
-		F782A98A2CE7A3BF00692FFF /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		F782A9A62CE933D600692FFF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F782A9AC2CE95BA100692FFF /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F782A9AE2CE95BF900692FFF /* PopulationDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataViewModel.swift; sourceTree = "<group>"; };
 		F782A9B02CE95E1F00692FFF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F782A9B22CE9643100692FFF /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		F782A9B42CE9643E00692FFF /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
-		F782A9B72CE9682F00692FFF /* PopulationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationServiceSpy.swift; sourceTree = "<group>"; };
+		F782A9B72CE9682F00692FFF /* MockPopulationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPopulationService.swift; sourceTree = "<group>"; };
+		F782A9B92CE9F77800692FFF /* Populus.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Populus.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,22 +90,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F782A94D2CE6A1CA00692FFF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F782A92D2CE6A1C600692FFF = {
 			isa = PBXGroup;
 			children = (
+				F782A9B92CE9F77800692FFF /* Populus.xctestplan */,
 				F782A9382CE6A1C700692FFF /* Populus */,
 				F782A9492CE6A1CA00692FFF /* PopulusTests */,
-				F782A9532CE6A1CA00692FFF /* PopulusUITests */,
 				F782A9372CE6A1C700692FFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,7 +108,6 @@
 			children = (
 				F782A9362CE6A1C700692FFF /* Populus.app */,
 				F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */,
-				F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,18 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				F782A9B62CE967C900692FFF /* PopulationListViewModel */,
-				F782A98A2CE7A3BF00692FFF /* MockNetworkManager.swift */,
 			);
 			path = PopulusTests;
-			sourceTree = "<group>";
-		};
-		F782A9532CE6A1CA00692FFF /* PopulusUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */,
-				F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */,
-			);
-			path = PopulusUITests;
 			sourceTree = "<group>";
 		};
 		F782A9632CE6BFB100692FFF /* Views */ = {
@@ -266,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */,
-				F782A9B72CE9682F00692FFF /* PopulationServiceSpy.swift */,
+				F782A9B72CE9682F00692FFF /* MockPopulationService.swift */,
 			);
 			path = PopulationListViewModel;
 			sourceTree = "<group>";
@@ -309,24 +278,6 @@
 			productReference = F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F782A94F2CE6A1CA00692FFF /* PopulusUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F782A9602CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "PopulusUITests" */;
-			buildPhases = (
-				F782A94C2CE6A1CA00692FFF /* Sources */,
-				F782A94D2CE6A1CA00692FFF /* Frameworks */,
-				F782A94E2CE6A1CA00692FFF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F782A9522CE6A1CA00692FFF /* PBXTargetDependency */,
-			);
-			name = PopulusUITests;
-			productName = PopulusUITests;
-			productReference = F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -341,10 +292,6 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					F782A9452CE6A1CA00692FFF = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = F782A9352CE6A1C700692FFF;
-					};
-					F782A94F2CE6A1CA00692FFF = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = F782A9352CE6A1C700692FFF;
 					};
@@ -365,7 +312,6 @@
 			targets = (
 				F782A9352CE6A1C700692FFF /* Populus */,
 				F782A9452CE6A1CA00692FFF /* PopulusTests */,
-				F782A94F2CE6A1CA00692FFF /* PopulusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -381,13 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F782A9442CE6A1CA00692FFF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F782A94E2CE6A1CA00692FFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,18 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F782A98B2CE7A3BF00692FFF /* MockNetworkManager.swift in Sources */,
 				F782A94B2CE6A1CA00692FFF /* PopulationListViewModelTests.swift in Sources */,
-				F782A9B82CE9682F00692FFF /* PopulationServiceSpy.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F782A94C2CE6A1CA00692FFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F782A9552CE6A1CA00692FFF /* PopulusUITests.swift in Sources */,
-				F782A9572CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift in Sources */,
+				F782A9B82CE9682F00692FFF /* MockPopulationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,11 +379,6 @@
 			isa = PBXTargetDependency;
 			target = F782A9352CE6A1C700692FFF /* Populus */;
 			targetProxy = F782A9472CE6A1CA00692FFF /* PBXContainerItemProxy */;
-		};
-		F782A9522CE6A1CA00692FFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F782A9352CE6A1C700692FFF /* Populus */;
-			targetProxy = F782A9512CE6A1CA00692FFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -684,44 +608,6 @@
 			};
 			name = Release;
 		};
-		F782A9612CE6A1CA00692FFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q4L92P5BF3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.PopulusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Populus;
-			};
-			name = Debug;
-		};
-		F782A9622CE6A1CA00692FFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F782A97A2CE6D82500692FFF /* Configs.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q4L92P5BF3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mwmv.PopulusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Populus;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -748,15 +634,6 @@
 			buildConfigurations = (
 				F782A95E2CE6A1CA00692FFF /* Debug */,
 				F782A95F2CE6A1CA00692FFF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F782A9602CE6A1CA00692FFF /* Build configuration list for PBXNativeTarget "PopulusUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F782A9612CE6A1CA00692FFF /* Debug */,
-				F782A9622CE6A1CA00692FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

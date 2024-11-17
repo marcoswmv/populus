@@ -11,6 +11,12 @@ struct PopulationDataResponse: Decodable {
     let data: [PopulationData]
 }
 
+extension PopulationDataResponse: Equatable {
+    static func == (lhs: PopulationDataResponse, rhs: PopulationDataResponse) -> Bool {
+        lhs.data == rhs.data
+    }
+}
+
 extension PopulationDataResponse {
     static var dummy: PopulationDataResponse = .init(
         data:
@@ -33,6 +39,19 @@ extension PopulationDataResponse {
             .init(state: "Arkansas", year: "2022", population: 3018669),
             .init(state: "California", year: "2022", population: 39356104),
             .init(state: "Colorado", year: "2022", population: 5770790),
+            .init(nation: "United States", year: "2022", population: 5028092),
+            .init(nation: "United States", year: "2022", population: 734821),
+            .init(nation: "United States", year: "2022", population: 7172282),
+            .init(nation: "United States", year: "2022", population: 3018669),
+            .init(nation: "United States", year: "2022", population: 39356104),
+            .init(nation: "United States", year: "2022", population: 5770790),
+            .init(nation: "United States", year: "2022", population: 7172282),
+            .init(nation: "United States", year: "2022", population: 3018669),
+            .init(nation: "United States", year: "2022", population: 39356104),
+            .init(nation: "United States", year: "2022", population: 5770790),
+            .init(nation: "United States", year: "2022", population: 7172282),
+            .init(nation: "United States", year: "2022", population: 3018669),
+            .init(nation: "United States", year: "2022", population: 39356104),
         ]
     )
 }

@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 protocol PopulationListViewModelProtocol: AnyObject, ObservableObject {
+    var service: PopulationServiceProtocol { get set }
+    var cancellables: Set<AnyCancellable> { get set }
     var populationData: [PopulationDataViewModel] { get set }
     var location: LocationType { get set }
     var year: Year { get set }
@@ -19,42 +21,25 @@ protocol PopulationListViewModelProtocol: AnyObject, ObservableObject {
 
 final class PopulationListViewModel: PopulationListViewModelProtocol {
 
-    private var service: PopulationServiceProtocol
-    private var backgroundQueue: DispatchQueue
-    private var cancellables: Set<AnyCancellable>
+    var service: PopulationServiceProtocol
+    var cancellables: Set<AnyCancellable>
 
     @Published var populationData: [PopulationDataViewModel]
     @Published var location: LocationType
     @Published var year: Year
     @Published var errorDescription: String
 
-
     init(
-        service: PopulationServiceProtocol,
-        queue: DispatchQueue = .global(qos: .background)
+        service: PopulationServiceProtocol
     ) {
         self.service = service
-        self.backgroundQueue = queue
         self.cancellables = .init()
         self.populationData = []
         self.location = .state
         self.year = .latest
         self.errorDescription = .init()
 
-        $location
-            .sink(receiveValue: { [weak self] value in
-                guard let self else { return }
-                self.requestData(for: value, year: year)
-            })
-            .store(in: &cancellables)
-
-        $year
-            .dropFirst()
-            .sink(receiveValue: { [weak self] value in
-                guard let self else { return }
-                self.requestData(for: location, year: value)
-            })
-            .store(in: &cancellables)
+        self.setSubscribers()
     }
 
     private func requestData(
@@ -79,5 +64,23 @@ final class PopulationListViewModel: PopulationListViewModelProtocol {
 
     func fetchData() {
         requestData(for: location, year: year)
+    }
+
+    private func setSubscribers() {
+        $location
+            .dropFirst()
+            .sink(receiveValue: { [weak self] value in
+                guard let self else { return }
+                self.requestData(for: value, year: year)
+            })
+            .store(in: &cancellables)
+
+        $year
+            .dropFirst()
+            .sink(receiveValue: { [weak self] value in
+                guard let self else { return }
+                self.requestData(for: location, year: value)
+            })
+            .store(in: &cancellables)
     }
 }

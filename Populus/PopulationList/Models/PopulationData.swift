@@ -7,18 +7,11 @@
 
 import Foundation
 
-struct PopulationData: Identifiable, Hashable, Decodable {
-    var id: String {
-        UUID().uuidString
-    }
+struct PopulationData: Decodable {
     var state: String?
     var nation: String?
     var year: String
     var population: Int
-
-    var administrativeAreaName: String {
-        nation ?? state ?? .init()
-    }
 
     enum CodingKeys: String, CodingKey {
         case state = "State"
@@ -26,4 +19,8 @@ struct PopulationData: Identifiable, Hashable, Decodable {
         case year = "Year"
         case population = "Population"
     }
+}
+
+extension PopulationData {
+    static var dummy: PopulationData = .init(state: "Alabama", year: "2022", population: 5028092)
 }

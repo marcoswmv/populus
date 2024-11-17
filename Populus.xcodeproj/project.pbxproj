@@ -11,7 +11,7 @@
 		F782A93C2CE6A1C700692FFF /* PopulationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A93B2CE6A1C700692FFF /* PopulationListView.swift */; };
 		F782A93E2CE6A1CA00692FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F782A93D2CE6A1CA00692FFF /* Assets.xcassets */; };
 		F782A9412CE6A1CA00692FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */; };
-		F782A94B2CE6A1CA00692FFF /* PopulusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A94A2CE6A1CA00692FFF /* PopulusTests.swift */; };
+		F782A94B2CE6A1CA00692FFF /* PopulationListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */; };
 		F782A9552CE6A1CA00692FFF /* PopulusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */; };
 		F782A9572CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */; };
 		F782A9662CE6BFD400692FFF /* PopulationDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9652CE6BFD400692FFF /* PopulationDataRow.swift */; };
@@ -21,11 +21,19 @@
 		F782A9712CE6CFF600692FFF /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9702CE6CFF600692FFF /* AppStrings.swift */; };
 		F782A9772CE6D6BF00692FFF /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */; };
 		F782A97D2CE6DAA800692FFF /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97C2CE6DAA800692FFF /* AppConfigs.swift */; };
-		F782A97F2CE6E78800692FFF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97E2CE6E78800692FFF /* NetworkManager.swift */; };
+		F782A97F2CE6E78800692FFF /* PopulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A97E2CE6E78800692FFF /* PopulationService.swift */; };
 		F782A9812CE6FCCD00692FFF /* PopulationDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */; };
 		F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9822CE71E0F00692FFF /* Int+Extension.swift */; };
 		F782A9872CE7761C00692FFF /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9862CE7761C00692FFF /* APIEnvironment.swift */; };
-		F782A9892CE7792E00692FFF /* AdministrativeAreaLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9882CE7792E00692FFF /* AdministrativeAreaLevel.swift */; };
+		F782A9892CE7792E00692FFF /* LocationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9882CE7792E00692FFF /* LocationType.swift */; };
+		F782A98B2CE7A3BF00692FFF /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A98A2CE7A3BF00692FFF /* MockNetworkManager.swift */; };
+		F782A9A72CE933D600692FFF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9A62CE933D600692FFF /* NetworkError.swift */; };
+		F782A9AD2CE95BA100692FFF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9AC2CE95BA100692FFF /* Parser.swift */; };
+		F782A9AF2CE95BF900692FFF /* PopulationDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9AE2CE95BF900692FFF /* PopulationDataViewModel.swift */; };
+		F782A9B12CE95E1F00692FFF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B02CE95E1F00692FFF /* NetworkManager.swift */; };
+		F782A9B32CE9643100692FFF /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B22CE9643100692FFF /* Measure.swift */; };
+		F782A9B52CE9643E00692FFF /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B42CE9643E00692FFF /* Year.swift */; };
+		F782A9B82CE9682F00692FFF /* PopulationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9B72CE9682F00692FFF /* PopulationServiceSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +60,7 @@
 		F782A93D2CE6A1CA00692FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F782A9402CE6A1CA00692FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "Populus/Resources/Preview Content/Preview Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		F782A9462CE6A1CA00692FFF /* PopulusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F782A94A2CE6A1CA00692FFF /* PopulusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusTests.swift; sourceTree = "<group>"; };
+		F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationListViewModelTests.swift; sourceTree = "<group>"; };
 		F782A9502CE6A1CA00692FFF /* PopulusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F782A9542CE6A1CA00692FFF /* PopulusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusUITests.swift; sourceTree = "<group>"; };
 		F782A9562CE6A1CA00692FFF /* PopulusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -65,11 +73,19 @@
 		F782A97A2CE6D82500692FFF /* Configs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.xcconfig; sourceTree = "<group>"; };
 		F782A97B2CE6D9F700692FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Populus/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		F782A97C2CE6DAA800692FFF /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
-		F782A97E2CE6E78800692FFF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F782A97E2CE6E78800692FFF /* PopulationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationService.swift; sourceTree = "<group>"; };
 		F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataResponse.swift; sourceTree = "<group>"; };
 		F782A9822CE71E0F00692FFF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		F782A9862CE7761C00692FFF /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
-		F782A9882CE7792E00692FFF /* AdministrativeAreaLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrativeAreaLevel.swift; sourceTree = "<group>"; };
+		F782A9882CE7792E00692FFF /* LocationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationType.swift; sourceTree = "<group>"; };
+		F782A98A2CE7A3BF00692FFF /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		F782A9A62CE933D600692FFF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F782A9AC2CE95BA100692FFF /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F782A9AE2CE95BF900692FFF /* PopulationDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataViewModel.swift; sourceTree = "<group>"; };
+		F782A9B02CE95E1F00692FFF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F782A9B22CE9643100692FFF /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		F782A9B42CE9643E00692FFF /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
+		F782A9B72CE9682F00692FFF /* PopulationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationServiceSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +157,8 @@
 		F782A9492CE6A1CA00692FFF /* PopulusTests */ = {
 			isa = PBXGroup;
 			children = (
-				F782A94A2CE6A1CA00692FFF /* PopulusTests.swift */,
+				F782A9B62CE967C900692FFF /* PopulationListViewModel */,
+				F782A98A2CE7A3BF00692FFF /* MockNetworkManager.swift */,
 			);
 			path = PopulusTests;
 			sourceTree = "<group>";
@@ -178,9 +195,11 @@
 		F782A9672CE6C29700692FFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F782A9882CE7792E00692FFF /* LocationType.swift */,
+				F782A9B22CE9643100692FFF /* Measure.swift */,
 				F782A9682CE6C5D900692FFF /* PopulationData.swift */,
 				F782A9802CE6FCCD00692FFF /* PopulationDataResponse.swift */,
-				F782A9882CE7792E00692FFF /* AdministrativeAreaLevel.swift */,
+				F782A9B42CE9643E00692FFF /* Year.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,8 +216,9 @@
 		F782A96F2CE6CFEA00692FFF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F782A9702CE6CFF600692FFF /* AppStrings.swift */,
 				F782A97C2CE6DAA800692FFF /* AppConfigs.swift */,
+				F782A9702CE6CFF600692FFF /* AppStrings.swift */,
+				F782A9AC2CE95BA100692FFF /* Parser.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -207,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				F782A96C2CE6CCE300692FFF /* PopulationListViewModel.swift */,
+				F782A9AE2CE95BF900692FFF /* PopulationDataViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -224,6 +245,7 @@
 		F782A9742CE6D63600692FFF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F782A97E2CE6E78800692FFF /* PopulationService.swift */,
 				F782A9752CE6D64200692FFF /* Network */,
 			);
 			path = Services;
@@ -234,9 +256,19 @@
 			children = (
 				F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */,
 				F782A9862CE7761C00692FFF /* APIEnvironment.swift */,
-				F782A97E2CE6E78800692FFF /* NetworkManager.swift */,
+				F782A9A62CE933D600692FFF /* NetworkError.swift */,
+				F782A9B02CE95E1F00692FFF /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F782A9B62CE967C900692FFF /* PopulationListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */,
+				F782A9B72CE9682F00692FFF /* PopulationServiceSpy.swift */,
+			);
+			path = PopulationListViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,17 +401,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F782A9892CE7792E00692FFF /* AdministrativeAreaLevel.swift in Sources */,
-				F782A97F2CE6E78800692FFF /* NetworkManager.swift in Sources */,
+				F782A9892CE7792E00692FFF /* LocationType.swift in Sources */,
+				F782A97F2CE6E78800692FFF /* PopulationService.swift in Sources */,
+				F782A9B52CE9643E00692FFF /* Year.swift in Sources */,
+				F782A9B32CE9643100692FFF /* Measure.swift in Sources */,
 				F782A9772CE6D6BF00692FFF /* APIEndpoint.swift in Sources */,
 				F782A9872CE7761C00692FFF /* APIEnvironment.swift in Sources */,
+				F782A9B12CE95E1F00692FFF /* NetworkManager.swift in Sources */,
+				F782A9AD2CE95BA100692FFF /* Parser.swift in Sources */,
 				F782A9812CE6FCCD00692FFF /* PopulationDataResponse.swift in Sources */,
 				F782A9692CE6C5D900692FFF /* PopulationData.swift in Sources */,
 				F782A9662CE6BFD400692FFF /* PopulationDataRow.swift in Sources */,
 				F782A93C2CE6A1C700692FFF /* PopulationListView.swift in Sources */,
 				F782A96D2CE6CCE300692FFF /* PopulationListViewModel.swift in Sources */,
+				F782A9A72CE933D600692FFF /* NetworkError.swift in Sources */,
 				F782A9712CE6CFF600692FFF /* AppStrings.swift in Sources */,
 				F782A96B2CE6C9F700692FFF /* String+Extension.swift in Sources */,
+				F782A9AF2CE95BF900692FFF /* PopulationDataViewModel.swift in Sources */,
 				F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */,
 				F782A93A2CE6A1C700692FFF /* PopulusApp.swift in Sources */,
 				F782A97D2CE6DAA800692FFF /* AppConfigs.swift in Sources */,
@@ -390,7 +428,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F782A94B2CE6A1CA00692FFF /* PopulusTests.swift in Sources */,
+				F782A98B2CE7A3BF00692FFF /* MockNetworkManager.swift in Sources */,
+				F782A94B2CE6A1CA00692FFF /* PopulationListViewModelTests.swift in Sources */,
+				F782A9B82CE9682F00692FFF /* PopulationServiceSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

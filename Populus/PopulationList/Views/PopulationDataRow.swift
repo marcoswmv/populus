@@ -9,25 +9,25 @@ import SwiftUI
 
 struct PopulationDataRow: View {
 
-    var model: PopulationData
+    var viewModel: PopulationDataViewModel
 
     var body: some View {
         HStack(alignment: .bottom) {
             VStack(alignment: .leading) {
-                Text(model.administrativeAreaName)
+                Text(viewModel.locationName)
                     .font(.title2)
                     .fontWeight(.bold)
 
                 HStack {
                     Text(AppStrings.populationLabel)
-                    Text(String(model.population.formattedToDecimalString))
+                    Text(String(viewModel.population.formattedToDecimalString))
                         .fontWeight(.bold)
                 }
                 .font(.subheadline)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
 
-            Text(model.year)
+            Text(viewModel.year)
                 .font(.subheadline)
         }
         .frame(maxWidth: .infinity)
@@ -36,8 +36,8 @@ struct PopulationDataRow: View {
 
 #Preview {
     PopulationDataRow(
-        model: .init(
-            state: "Alabama",
+        viewModel: .init(
+            locationName: "Alabama",
             year: "2022",
             population: 5028092
         )

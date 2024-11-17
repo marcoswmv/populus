@@ -8,11 +8,11 @@
 import Foundation
 
 enum APIEnvironment {
-    case production
+    case development
 
     var baseUrl: String {
         switch self {
-        case .production:
+        case .development:
             guard let apiBaseURL = Bundle.main.object(forInfoDictionaryKey: AppConfigs.Keys.baseUrl) as? String else {
                 fatalError("ApiBaseURL must not be empty in plist")
             }

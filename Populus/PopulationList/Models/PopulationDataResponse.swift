@@ -12,12 +12,27 @@ struct PopulationDataResponse: Decodable {
 }
 
 extension PopulationDataResponse {
-    static var mocked: [PopulationData] = [
-        .init(state: "Alabama", year: "2022", population: 5028092),
-        .init(state: "Alaska", year: "2022", population: 734821),
-        .init(state: "Arizona", year: "2022", population: 7172282),
-        .init(state: "Arkansas", year: "2022", population: 3018669),
-        .init(state: "California", year: "2022", population: 39356104),
-        .init(state: "Colorado", year: "2022", population: 5770790)
-    ]
+    static var dummy: PopulationDataResponse = .init(
+        data:
+        [
+            .init(state: "Alabama", year: "2022", population: 5028092),
+            .init(state: "Alaska", year: "2022", population: 734821),
+            .init(state: "Arizona", year: "2022", population: 7172282),
+            .init(state: "Arkansas", year: "2022", population: 3018669),
+            .init(state: "California", year: "2022", population: 39356104),
+            .init(state: "Colorado", year: "2022", population: 5770790),
+            .init(state: "Arizona", year: "2022", population: 7172282),
+            .init(state: "Arkansas", year: "2022", population: 3018669),
+            .init(state: "California", year: "2022", population: 39356104),
+            .init(state: "Colorado", year: "2022", population: 5770790),
+            .init(state: "Arizona", year: "2022", population: 7172282),
+            .init(state: "Arkansas", year: "2022", population: 3018669),
+            .init(state: "California", year: "2022", population: 39356104),
+            .init(state: "Colorado", year: "2022", population: 5770790),
+            .init(state: "Arizona", year: "2022", population: 7172282),
+            .init(state: "Arkansas", year: "2022", population: 3018669),
+            .init(state: "California", year: "2022", population: 39356104),
+            .init(state: "Colorado", year: "2022", population: 5770790),
+        ]
+    )
 }

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PopulationListView<ViewModel: PopulationListViewModelProtocol>: View {
 
-    @ObservedObject var viewModel: ViewModel
+    @EnvironmentObject private var viewModel: ViewModel
     @State private var showingAlert: Bool = false
 
     var body: some View {
         NavigationStack {
             VStack {
                 List(viewModel.populationData) { data in
-                    PopulationDataRow(model: data)
+                    PopulationDataRow(viewModel: data)
                 }
             }
             .alert(
@@ -38,14 +38,14 @@ struct PopulationListView<ViewModel: PopulationListViewModelProtocol>: View {
             .navigationTitle(AppStrings.populationTitle)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
-                    Picker("", selection: $viewModel.areaLevel) {
-                        ForEach(AdministrativeAreaLevel.allCases) { item in
+                    Picker("", selection: $viewModel.location) {
+                        ForEach(LocationType.allCases) { item in
                             Text(item.rawValue)
                                 .tag(item)
                         }
                     }
 
-                    Picker("", selection: $viewModel.timeFilter) {
+                    Picker("", selection: $viewModel.year) {
                         ForEach(Year.allCases) { item in
                             Text(item.rawValue.capitalized)
                                 .tag(item)
@@ -58,11 +58,11 @@ struct PopulationListView<ViewModel: PopulationListViewModelProtocol>: View {
 }
 
 struct PreviewPopulationListView: View {
-
-    @StateObject private var viewModel: PopulationListViewModel = .init(networkManager: NetworkManager())
+    @StateObject private var viewModel: PopulationListViewModel = .init(service: PopulationService(service: NetworkManager()))
 
     var body: some View {
-        PopulationListView(viewModel: viewModel)
+        PopulationListView<PopulationListViewModel>()
+            .environmentObject(viewModel)
     }
 }
 

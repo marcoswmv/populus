@@ -9,7 +9,7 @@ import Foundation
 
 enum AppConfigs {
     enum Keys {
-        case drilldowns(AdministrativeAreaLevel)
+        case drilldowns(LocationType)
         case measures(Measure)
         
         static let baseUrl = "BASE_URL"
@@ -20,8 +20,8 @@ enum AppConfigs {
     }
 
     enum Values {
-        static func set(administrativeAreaLevel: AdministrativeAreaLevel) -> String {
-            administrativeAreaLevel.rawValue
+        static func set(location: LocationType) -> String {
+            location.rawValue
         }
 
         static func set(measure: Measure) -> String {

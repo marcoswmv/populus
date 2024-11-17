@@ -9,53 +9,75 @@ import Foundation
 import Combine
 
 protocol PopulationListViewModelProtocol: AnyObject, ObservableObject {
-    var populationData: [PopulationData] { get set }
-    var areaLevel: AdministrativeAreaLevel { get set }
-    var timeFilter: Year { get set }
+    var populationData: [PopulationDataViewModel] { get set }
+    var location: LocationType { get set }
+    var year: Year { get set }
     var errorDescription: String { get set }
+
+    func fetchData()
 }
 
 final class PopulationListViewModel: PopulationListViewModelProtocol {
 
-    @Published var populationData: [PopulationData] = PopulationDataResponse.mocked
-    @Published var areaLevel: AdministrativeAreaLevel = .state
-    @Published var timeFilter: Year = .latest
-    @Published var errorDescription: String = .init()
+    private var service: PopulationServiceProtocol
+    private var backgroundQueue: DispatchQueue
+    private var cancellables: Set<AnyCancellable>
 
-    private var networkManager: NetworkManagerProtocol
-    private var cancellables: Set<AnyCancellable> = .init()
-    private var backgroundQueue: DispatchQueue = DispatchQueue.global(qos: .background)
+    @Published var populationData: [PopulationDataViewModel]
+    @Published var location: LocationType
+    @Published var year: Year
+    @Published var errorDescription: String
 
-    init(networkManager: NetworkManagerProtocol) {
-        self.networkManager = networkManager
 
-        $areaLevel
+    init(
+        service: PopulationServiceProtocol,
+        queue: DispatchQueue = .global(qos: .background)
+    ) {
+        self.service = service
+        self.backgroundQueue = queue
+        self.cancellables = .init()
+        self.populationData = []
+        self.location = .state
+        self.year = .latest
+        self.errorDescription = .init()
+
+        $location
             .sink(receiveValue: { [weak self] value in
                 guard let self else { return }
-                self.requestData(areaLevel: value, year: timeFilter)
+                self.requestData(for: value, year: year)
             })
             .store(in: &cancellables)
 
-        $timeFilter
+        $year
             .dropFirst()
             .sink(receiveValue: { [weak self] value in
                 guard let self else { return }
-                self.requestData(areaLevel: areaLevel, year: value)
+                self.requestData(for: location, year: value)
             })
             .store(in: &cancellables)
     }
 
-    private func requestData(areaLevel: AdministrativeAreaLevel, year: Year = .all) {
-        networkManager.requestPopulationData(at: areaLevel, on: year) { [weak self] result in
+    private func requestData(
+        for location: LocationType,
+        year: Year = .all
+    ) {
+        service.requestPopulationData(
+            at: location,
+            on: year
+        ) { [weak self] result in
             guard let self else { return }
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
-                    self.populationData = response.data
+                    self.populationData = Parser.generateViewModel(from: response.data)
                 case .failure(let error):
                     self.errorDescription = error.description
                 }
             }
         }
+    }
+
+    func fetchData() {
+        requestData(for: location, year: year)
     }
 }

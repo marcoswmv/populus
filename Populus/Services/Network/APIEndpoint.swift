@@ -15,7 +15,7 @@ enum HTTPMethod: String {
     case put = "PUT"
 }
 
-protocol EndpointType {
+protocol EndpointProtocol {
     var path: String { get }
     var httpMethod: HTTPMethod { get }
     var queryItems: [URLQueryItem] { get }
@@ -23,10 +23,10 @@ protocol EndpointType {
 }
 
 enum APIEndpoint {
-    case data(AdministrativeAreaLevel = .nation, Year? = nil)
+    case data(LocationType = .nation, Year? = nil)
 }
 
-extension APIEndpoint: EndpointType {
+extension APIEndpoint: EndpointProtocol {
 
     func generateURLRequest(baseURL: String) -> URLRequest {
         guard var urlComponents: URLComponents = .init(string: baseURL) else { return .init(url: .temporaryDirectory) }
@@ -63,7 +63,7 @@ extension APIEndpoint: EndpointType {
         switch self {
         case .data(let area, let year):
             var items: [URLQueryItem] = [
-                URLQueryItem(name: AppConfigs.Keys.drilldowns, value: AppConfigs.Values.set(administrativeAreaLevel: area)),
+                URLQueryItem(name: AppConfigs.Keys.drilldowns, value: AppConfigs.Values.set(location: area)),
                 URLQueryItem(name: AppConfigs.Keys.measures, value: AppConfigs.Values.set(measure: .population)),
             ]
             if let year {

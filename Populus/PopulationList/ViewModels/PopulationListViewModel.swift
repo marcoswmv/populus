@@ -17,6 +17,7 @@ protocol PopulationListViewModelProtocol: AnyObject, ObservableObject {
     var errorDescription: String { get set }
 
     func fetchData()
+    func setSubscribers()
 }
 
 final class PopulationListViewModel: PopulationListViewModelProtocol {
@@ -66,7 +67,7 @@ final class PopulationListViewModel: PopulationListViewModelProtocol {
         requestData(for: location, year: year)
     }
 
-    private func setSubscribers() {
+    func setSubscribers() {
         $location
             .dropFirst()
             .sink(receiveValue: { [weak self] value in

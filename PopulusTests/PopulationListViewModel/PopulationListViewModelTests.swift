@@ -31,55 +31,104 @@ final class PopulationListViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testFetchPopulationDataWithSuccess() {
+    func testFetchPopulationDataShouldReturnDataWithSuccess() {
         // given
-        let dummyResponse: PopulationDataResponse = mockedService.response
+        let dummyResponse: PopulationDataResponse = .dummy
         let expectedResponse: [PopulationDataViewModel] = Parser.generateViewModel(from: dummyResponse.data)
+        mockedService.result = .success(dummyResponse)
+        var receivedResponse: [PopulationDataViewModel] = []
         let expectation = XCTestExpectation(description: "Data successfully fetched")
 
         // when
         sut.$populationData
             .dropFirst()
-            .sink { [weak self] response in
-                guard let self else { return }
-                XCTAssertEqual(response, expectedResponse)
+            .sink { response in
+                receivedResponse = response
                 expectation.fulfill()
             }
             .store(in: &subscriptions)
         sut.fetchData()
 
+        wait(for: [expectation], timeout: 1)
+
         // then
-        wait(for: [expectation], timeout: 5)
+        XCTAssertEqual(receivedResponse, expectedResponse)
     }
 
-    func testRequestDataFromMockedPopulationService() {
-        //given
-        let expectedDummyResponse: PopulationDataResponse = mockedService.response
-        let expectation = XCTestExpectation(description: "Data successfully fetched")
-
-        //when
-        mockedService.requestPopulationData(at: .nation, on: .all) { result in
-            switch result {
-            case .success(let response):
-                XCTAssertEqual(response, expectedDummyResponse)
-            case .failure(let error):
-                XCTAssertNil(error)
-            }
-            expectation.fulfill()
-        }
-
-        //then
-        wait(for: [expectation], timeout: 5)
-    }
-
-    func testFetchPopulationDataWithFailure() {
+    func testFetchPopulationDataShouldFailToReturnData() {
         // given
-        mockedService.error = .badRequest
+        let expectedResponse: NetworkError = .badRequest
+        mockedService.result = .failure(expectedResponse)
+        var receivedResponse: String = .init()
+        let expectation = XCTestExpectation(description: "Data fetched with error")
 
         // when
+        sut.$errorDescription
+            .dropFirst()
+            .sink { response in
+                receivedResponse = response.description
+                expectation.fulfill()
+            }
+            .store(in: &subscriptions)
         sut.fetchData()
 
+        wait(for: [expectation], timeout: 1)
+
+        //then
+        XCTAssertEqual(receivedResponse, expectedResponse.description)
+    }
+
+    func testSetYear() {
+        // given
+        let expectedLocation: Year = .latest
+        sut.setSubscribers()
+        var receivedResponse: [Year] = []
+        let expectation = XCTestExpectation(description: "Year parameter was set")
+
         // when
-//        XCTAssertEqual(sut.errorDescription, NetworkError.badRequest.description)
+        sut.$year
+            .dropFirst()
+            .sink { response in
+                receivedResponse.append(response)
+                expectation.fulfill()
+            }
+            .store(in: &subscriptions)
+        sut.year = expectedLocation
+
+        wait(for: [expectation], timeout: 1)
+
+        // then
+        XCTAssertEqual(receivedResponse[0], expectedLocation)
+    }
+
+    func testFetchPopulationDataShouldSetLocation() {
+        // given
+        let expectedLocation: LocationType = .state
+        let dummyResponse: PopulationDataResponse = .init(data: PopulationDataResponse.dummy.data.filter {
+            if expectedLocation == .nation {
+                return $0.nation != nil
+            }
+            return $0.state != nil
+        })
+
+        let expectedResponse: [PopulationDataViewModel] = Parser.generateViewModel(from: dummyResponse.data)
+        mockedService.result = .success(dummyResponse)
+        var receivedResponse: [PopulationDataViewModel] = []
+        let expectation = XCTestExpectation(description: "Data with set location successfully set")
+
+        // when
+        sut.$populationData
+            .dropFirst()
+            .sink { response in
+                receivedResponse = response
+                expectation.fulfill()
+            }
+            .store(in: &subscriptions)
+        sut.location = expectedLocation
+
+        wait(for: [expectation], timeout: 1)
+
+        // then
+        XCTAssertEqual(receivedResponse, expectedResponse)
     }
 }

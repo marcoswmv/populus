@@ -10,26 +10,15 @@ import Foundation
 
 final class MockPopulationService: PopulationServiceProtocol {
 
-    var response: PopulationDataResponse = .init(data: [])
-    var error: NetworkError?
+    var result: Result<PopulationDataResponse, NetworkError>?
 
     func requestPopulationData(
         at location: LocationType,
         on year: Year?,
         completionHandler: @escaping PopulationDataResultBlock
     ) {
-        if let error {
-            completionHandler(.failure(error))
-        } else {
-            response = .init(data: PopulationDataResponse.dummy.data
-                .filter {
-                    data in
-                    if location == .nation {
-                        return data.nation != nil
-                    }
-                    return data.state != nil
-                })
-            completionHandler(.success(response))
+        if let result {
+            completionHandler(result)
         }
     }
 }

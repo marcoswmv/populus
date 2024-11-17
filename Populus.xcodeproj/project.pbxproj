@@ -14,7 +14,6 @@
 		F782A94B2CE6A1CA00692FFF /* PopulationListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */; };
 		F782A9662CE6BFD400692FFF /* PopulationDataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9652CE6BFD400692FFF /* PopulationDataRow.swift */; };
 		F782A9692CE6C5D900692FFF /* PopulationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9682CE6C5D900692FFF /* PopulationData.swift */; };
-		F782A96B2CE6C9F700692FFF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A96A2CE6C9F700692FFF /* String+Extension.swift */; };
 		F782A96D2CE6CCE300692FFF /* PopulationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A96C2CE6CCE300692FFF /* PopulationListViewModel.swift */; };
 		F782A9712CE6CFF600692FFF /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9702CE6CFF600692FFF /* AppStrings.swift */; };
 		F782A9772CE6D6BF00692FFF /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */; };
@@ -53,7 +52,6 @@
 		F782A94A2CE6A1CA00692FFF /* PopulationListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationListViewModelTests.swift; sourceTree = "<group>"; };
 		F782A9652CE6BFD400692FFF /* PopulationDataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationDataRow.swift; sourceTree = "<group>"; };
 		F782A9682CE6C5D900692FFF /* PopulationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationData.swift; sourceTree = "<group>"; };
-		F782A96A2CE6C9F700692FFF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F782A96C2CE6CCE300692FFF /* PopulationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationListViewModel.swift; sourceTree = "<group>"; };
 		F782A9702CE6CFF600692FFF /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		F782A9762CE6D6BF00692FFF /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 		F782A96E2CE6CFDB00692FFF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F782A96A2CE6C9F700692FFF /* String+Extension.swift */,
 				F782A9822CE71E0F00692FFF /* Int+Extension.swift */,
 			);
 			path = Extensions;
@@ -355,7 +352,6 @@
 				F782A96D2CE6CCE300692FFF /* PopulationListViewModel.swift in Sources */,
 				F782A9A72CE933D600692FFF /* NetworkError.swift in Sources */,
 				F782A9712CE6CFF600692FFF /* AppStrings.swift in Sources */,
-				F782A96B2CE6C9F700692FFF /* String+Extension.swift in Sources */,
 				F782A9AF2CE95BF900692FFF /* PopulationDataViewModel.swift in Sources */,
 				F782A9832CE71E0F00692FFF /* Int+Extension.swift in Sources */,
 				F782A93A2CE6A1C700692FFF /* PopulusApp.swift in Sources */,

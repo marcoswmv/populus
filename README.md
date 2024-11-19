@@ -9,3 +9,4 @@ Technologies used in the project:
 *   Combine
 *   MVVM
 *   URLSession
+*   XCTest
